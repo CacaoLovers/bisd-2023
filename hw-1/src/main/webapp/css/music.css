@@ -1,0 +1,42 @@
+body, html{
+    background-color: #171717;
+}
+
+main{
+    width: 25%;
+    height: 100%;
+    margin: auto;
+
+
+}
+
+audio{
+    width: 95%;
+    display: block;
+    margin: auto;
+}
+
+.music-container{
+    width: 100%;
+    height: 450px;
+    background-color: #363636;
+    border-radius: 20px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.music-container p{
+    margin-left: 40px;
+    margin-top: 10px;
+    color: #cbcbcb;
+    font-size: 2em;
+}
+
+.music-image {
+    width: 95%;
+    height: 60%;
+    display: block;
+    margin: auto;
+    background-color: #797979;
+    border-radius: 15px;
+}

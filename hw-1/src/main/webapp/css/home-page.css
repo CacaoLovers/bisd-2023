@@ -1,0 +1,191 @@
+html, body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 99%;
+    height: 5%;
+    display: inline-block;
+    color: white;
+}
+
+.menu {
+    width: 50px;
+    height: 50px;
+    margin-left: 40px;
+    background-color: black;
+    border: 3px solid white;
+
+}
+
+
+.header-img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.header-text {
+    color: white;
+    font-size: 30px;
+    display: block;
+    width: 98%;
+    height: 100%;
+
+    font-family: Calibri;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: right;
+    vertical-align: middle;
+    padding-right: 10px;
+    animation: hidder 10s forwards;
+    margin-bottom: 10px;
+}
+
+.page-text {
+    color: white;
+    position: absolute;
+    font-size: 6.5em;
+    width: 60%;
+    font-family: Cambria Math;
+    height: 200px;
+    top: 55%;
+    left: 68%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    animation: hidde 7s forwards;
+}
+
+@keyframes hidde {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(1);
+    }
+}
+
+span {
+
+    opacity: 0;
+    filter: blur(4px);
+}
+
+span:nth-child(1) {
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+    animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4) {
+    animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+    100% {
+
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+
+.border-button {
+    width: 4em;
+    height: 1.5em;
+    text-decoration: none;
+    display: table-cell;
+    padding: 20px 30px;
+    position: relative;
+    top: 80px;
+    left: 150px;
+    color: white;
+    font-weight: 300;
+    font-family: Calibri;
+    font-size: 70px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+    vertical-align: middle;
+    animation: hidder 10s;
+}
+
+.border-button image{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+@keyframes hidder {
+    0%{
+        opacity: 0;
+
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.border-button:before, .border-button:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    box-sizing: border-box;
+
+}
+.border-button:before {
+    bottom: 0;
+    left: 0;
+    border-left: 1px solid red;
+    border-top: 1px solid red;
+    transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
+}
+.border-button:after {
+    top: 0;
+    right: 0;
+    border-right: 1px solid red;
+    border-bottom: 1px solid red;
+    transition: 0s ease opacity .4s, .2s ease width, .2s ease height .2s;
+
+}
+.border-button:hover:before,
+.border-button:hover:after {
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+
+}
+.border-button:hover:before {
+    transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;
+
+}
+.border-button:hover:after {
+    transition: 0s ease opacity .4s, .2s ease height .4s, .2s ease width .6s;
+}
