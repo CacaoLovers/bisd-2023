@@ -1,0 +1,184 @@
+body, html{
+    background-color: #e3e3e3;
+    font-family: Calibri;
+    color: #6b6b6b;
+
+}
+
+main{
+    width: 400px;
+    height: 400px;
+    display: block;
+    margin: auto;
+    background-color: #eeeeee;
+    border-radius: 20px;
+    margin-top: 10%;
+    padding-top: 50px;
+    box-shadow: 0px 0px 16px 4px rgba(34, 60, 80, 0.15);
+}
+
+.create-room{
+    display: block;
+    height: 40%;
+    width: 90%;
+    margin: auto;
+
+}
+
+.create-form{
+    width: 100%;
+    height: 100%;
+}
+
+.create-button{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 2.5em;
+    cursor: pointer;
+    border: none;
+    color: #6b6b6b;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    box-shadow: 0px 0px 8px -1px rgba(34, 60, 80, 0.2);
+}
+
+.join-room{
+    display: block;
+    height: 40%;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    perspective: 1000;
+
+
+}
+
+
+
+
+/* весь контейнер поддерживает перспективу */
+.flip-container {
+    height: 40%;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    perspective: 1000;
+    -webkit-perspective: 1000;
+}
+/* переверните сторону при проведении мышью */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+
+/* здесь находится скорость перевертывания */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+/* скройте обратную сторону во время переворота */
+.front, .back {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* лицевая сторона размещена над обратной */
+.front {
+
+    background-color: white;
+    border-radius: 10px;
+    font-size: 2.5em;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    box-shadow: 0px 0px 8px -1px rgba(34, 60, 80, 0.2);
+}
+
+/* обратная, изначально скрытая сторона */
+.back {
+    transform: rotateY(180deg);
+    background: #F7DD25;
+    height: 120%;
+    background: -webkit-linear-gradient(top left, #F7DD25, #9C13D9);
+    background: -moz-linear-gradient(top left, #F7DD25, #9C13D9);
+    background: linear-gradient(to bottom right, #F7DD25, #9C13D9);
+    border-radius: 10px;
+    font-size: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: white;
+    box-shadow: 0px 0px 8px -1px rgba(34, 60, 80, 0.2);
+}
+
+.back input{
+    border-radius: 5px;
+    border: none;
+    width: 70%;
+    height: 20%;
+    font-size: 1.4em;
+    margin-top: -20px;
+    color: #6b6b6b;
+    padding: 2px 2px 2px 2px;
+    padding-left: 10px;
+}
+
+.back button{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 40%;
+    font-size: 1.1em;
+    border-radius: 10px;
+    border: none;
+    padding-top: 8px;
+    padding-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.change-lan {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    min-width: 100px;
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: #eeeeee;
+    border-radius: 20px;
+    box-shadow: 0px 0px 16px 4px rgba(34, 60, 80, 0.15);
+}
+
+.change-lan button{
+    display: inline-block;
+    width: 50px;
+    height: 35px;
+    background-color: #6b6b6b;
+    border-radius: 10px;
+    border: none;
+    background-size: cover;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.change-lan button:hover{
+    transform: scale(1.1);
+}
+
