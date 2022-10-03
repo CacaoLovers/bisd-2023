@@ -12,7 +12,12 @@ public class resource_ru extends ListResourceBundle {
             {"join", "Войти"},
             {"room", "Комната"},
             {"send", "Отправить"},
-            {"homePage", "Домашняя страница"}
+            {"homePage", "Домашняя страница"},
+            {"chatNamePlaceholder", "Введите ник для чата"},
+            {"enterMessage", "Введите сообщение"},
+            {"enterRoom", "Пользователь %s вошел в комнату"},
+            {"greetingsUser", "Приветствуем нового участника чата %s"},
+            {"outputRoom", "Пользователь %s вышел из комнаты"}
 
     };
 

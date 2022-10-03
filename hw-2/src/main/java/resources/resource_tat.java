@@ -11,7 +11,12 @@ public class resource_tat extends ListResourceBundle {
             {"join", "Керү"},
             {"room", "Бүлмә"},
             {"send", "Җибәрү"},
-            {"homePage", "Баш бит"}
+            {"homePage", "Баш бит"},
+            {"chatNamePlaceholder", "Чат өчен ник кертегез"},
+            {"enterMessage", "Хәбәр языгыз"},
+            {"enterRoom", "Кулланучы %s бүлмәгә керде"},
+            {"greetingsUser", "Чатның яңа әгъзасын сәламлибез %s"},
+            {"outputRoom", "Кулланучы %s бүлмәдән чыкты"}
 
     };
 

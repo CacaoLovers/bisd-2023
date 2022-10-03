@@ -12,6 +12,8 @@ import repositories.UsersRepository;
 import repositories.UsersSet;
 
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 
 @WebServlet(name = "roomServlet", value = "/room")
@@ -145,13 +147,15 @@ public class ChatRoomServlet extends HttpServlet {
 
     private static String selectPlaceholderStatus(HttpSession session, HttpServletRequest request){
 
-        if ( session.getAttribute("name") == null ){
+        ResourceBundle resourceBundle = (ResourceBundle) session.getAttribute("resourceBundle");
 
-            return "Введите ник для чата";
+        if ( session.getAttribute("name") == null && resourceBundle != null){
+
+            return resourceBundle.getString("chatNamePlaceholder");
 
         } else{
 
-            return "Введите сообщение";
+            return resourceBundle.getString("enterMessage");
 
         }
 
@@ -160,6 +164,7 @@ public class ChatRoomServlet extends HttpServlet {
     private boolean sendMessage (String message, HttpSession session, HttpServletRequest request, HttpServletResponse response){
 
         ChatRoom chatRoom = (ChatRoom) session.getAttribute("chatRoom");
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("resources.resource", new Locale("en"));
 
 
         if (session.getAttribute("name") == null) {
@@ -167,7 +172,7 @@ public class ChatRoomServlet extends HttpServlet {
             if (!usersRepository.containsUser(message)) {
 
                 session.setAttribute("name", message);
-                chatRoom.addServerMessage("Приветствуем нового участника чата " + message);
+                chatRoom.addServerMessage( String.format(resourceBundle.getString("greetingsUser"), message) );
                 usersRepository.addUser(message);
 
             } else {
@@ -187,16 +192,18 @@ public class ChatRoomServlet extends HttpServlet {
     }
 
     private static void sendJoinRoom (HttpSession session, ChatRoom chatRoom){
-        if (session.getAttribute("name") != null) {
 
-            chatRoom.addServerMessage("Пользователь " + session.getAttribute("name").toString() + " вошел в комнату");
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("resources.resource", new Locale("en"));
+
+        if (session.getAttribute("name") != null
+                        && resourceBundle != null) {
+
+            chatRoom.addServerMessage( String.format(resourceBundle.getString("enterRoom"), session.getAttribute("name").toString()) );
 
         }
     }
 
     private static void sendError(String message, HttpSession session, HttpServletResponse response){
-
-
 
         try {
 

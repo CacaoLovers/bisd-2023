@@ -12,7 +12,12 @@ public class resource_en extends ListResourceBundle {
             {"join", "Enter"},
             {"room", "Room"},
             {"send", "Submit"},
-            {"homePage", "Home page"}
+            {"homePage", "Home page"},
+            {"chatNamePlaceholder", "Enter a nickname for the chat"},
+            {"enterMessage", "Enter a message"},
+            {"enterRoom", "The user %s entered the room"},
+            {"greetingsUser", "Welcome a new chat participant %s"},
+            {"outputRoom", "The user %s left the room"}
     };
 
     @Override

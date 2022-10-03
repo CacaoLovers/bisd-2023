@@ -20,9 +20,9 @@
 
             <form action="/" method="post">
 
-                <button type="submit" name = "language" value="en" style="background-image: url('../images/eng.jpg')"></button>
-                <button type="submit" name = "language" value="ru" style="background-image: url('/images/russia.jpeg')"></button>
-                <button type="submit" name = "language" value="tat" style="background-image: url('/images/tatar.jpg')"></button>
+                <button type="submit" name = "language" value="en" style="background-image: url('${pageContext.request.contextPath}/images/eng.jpg')"></button>
+                <button type="submit" name = "language" value="ru" style="background-image: url('${pageContext.request.contextPath}/images/russia.jpeg')"></button>
+                <button type="submit" name = "language" value="tat" style="background-image: url('${pageContext.request.contextPath}/images/tatar.jpg')"></button>
 
             </form>
 

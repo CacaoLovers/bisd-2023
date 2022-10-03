@@ -18,7 +18,7 @@
 
     <head>
 
-        <title>${sessionScope.resourceBundle.getString("room")} ${sessionScope.currentRoom} </title>
+        <title>${ sessionScope.resourceBundle.getString("room") } ${sessionScope.currentRoom} </title>
         <style><%@include file="/css/room.css" %></style>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 

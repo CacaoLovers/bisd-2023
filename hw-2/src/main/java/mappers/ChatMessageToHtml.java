@@ -58,7 +58,7 @@ public class ChatMessageToHtml {
         return output;
     }
 
-    public static String outputMessagesForShow (ChatRoom chatRoom){
+    public static String outputMessagesForShow (ChatRoom chatRoom) {
 
         String output = "";
 
