@@ -1,0 +1,181 @@
+html {
+
+    font-family: Gilroy;
+    padding: 0px;
+    margin: auto;
+
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+    url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+    url('../fonts/Gilroy-Semibold.woff') format('woff'),
+    url('../fonts/Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+body {
+
+    min-width: 900px;
+    height: auto;
+
+}
+
+main {
+
+    height: 70%;
+    width: 60%;
+    margin-top: 50px;
+    margin: auto;
+
+
+}
+
+.district-block-container {
+
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 20%;
+    border: 2px solid #998686;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 30px;
+
+}
+
+.district-block-container-header {
+
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 8px 10px 8px 10px;
+    margin-top: -20px;
+    margin-left: 40px;
+    color: #624545;
+    background-color: white;
+
+}
+
+.district-holder{
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+.district-form {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.district {
+
+    width: auto;
+    height: auto;
+    font-size: 120%;
+    border-radius: 15px;
+    background: none;
+    font-family: 'Gilroy';
+    padding: 8px 30px 8px 30px;
+    color: #624545;
+    border: 2px solid #c08a90;
+    cursor: pointer;
+
+}
+
+.district:hover {
+
+    background-color: #c08a90;
+    color: white;
+
+}
+
+.district-remove {
+    width: 20px;
+    height: 20px;
+    background-image: url('/images/close.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff00;
+    border: none;
+    margin-left: 10px;
+    margin-right: -10px;
+    margin-bottom: -4px;
+    cursor: pointer;
+
+}
+
+#district-add {
+    background-color: #c08a90;
+    color: white;
+}
+
+.profile-volunteer-button-holder{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.profile-volunteer-button {
+    background-color: #c08a90;
+    padding: 15px 30px 15px 30px;
+    text-decoration: none;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    font-size: 140%;
+}
+
+
+
+.missing-handler {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    height: auto;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.missing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 8px 8px 8px 8px;
+    margin-left: 50px;
+}
+
+.missing-container-header {
+    color: #624545;
+    border: 2px solid #998686;
+    font-size: 120%;
+    padding: 8px 30px 8px 30px;
+    border-radius: 15px;
+}
+
+.missing-container-entity {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.missing-entity {
+    margin-top: 10px;
+    border: none;
+    background: none;
+    font-family: Gilroy;
+    cursor: pointer;
+}
+
+
+
