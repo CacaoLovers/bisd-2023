@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Объявления</title>
+    <link href="../css/head.css" rel="stylesheet" type="text/css">
     <link href="../css/admin-missing.css" rel="stylesheet" type="text/css">
 
 </head>
