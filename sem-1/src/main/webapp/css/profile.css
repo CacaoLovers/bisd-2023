@@ -1,0 +1,278 @@
+html {
+
+    font-family: Gilroy;
+    padding: 0px;
+    margin: auto;
+
+}
+
+@font-face {
+
+    font-family: 'Gilroy';
+    src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+    url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+    url('../fonts/Gilroy-Semibold.woff') format('woff'),
+    url('../fonts/Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+main {
+
+    width: 60%;
+    height: auto;
+    margin: auto;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+}
+
+
+.right-container {
+
+    display: flex;
+    flex-direction: column;
+    width: 68%;
+    height: auto;
+
+}
+
+.profile-photo {
+
+    border: 2px solid #c08a90;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+
+}
+
+.form-left {
+
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+
+}
+
+.form-left-button {
+
+    width: 100%;
+    height: auto;
+    font-size: 120%;
+    border-radius: 15px;
+    background: none;
+    font-family: 'Gilroy';
+    padding: 8px 0px 8px 0px;
+    color: #624545;
+    border: 2px solid #c08a90;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.form-left-button:hover {
+
+    background-color: #c08a90;
+    color: white;
+
+}
+
+.left-container {
+
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: auto;
+
+}
+
+.info-block{
+
+    width: 100%;
+    height: auto;
+    min-height: 230px;
+
+}
+
+.text-info-header {
+
+    color: #624545;
+    font-size: 1.7em;
+    margin-top: 30px;
+    margin-left: 15%;
+
+}
+
+.text-info {
+
+    color: #624545;
+    font-size: 1.3em;
+    margin-top: 20px;
+    margin-left: 8%;
+
+}
+
+.block-menu {
+    width: 100%;
+    height: auto;
+}
+
+.block-menu-header{
+    display: flex;
+    justify-content: space-around;
+    font-size: 140%;
+    color: #624545;
+    width: 60%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.block-menu-missing {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-menu-notification {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.block-menu-notification-entity {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.block-menu-notification-entity p{
+    width: 80%;
+    margin-left: 30px;
+}
+
+.block-menu-notification-entity a{
+    display: inline-block;
+}
+
+.block-menu-notification-entity button{
+
+    font-size: 100%;
+    border-radius: 15px;
+    background: none;
+    font-family: 'Gilroy';
+    padding: 8px 20px 8px 20px;
+    color: #624545;
+    border: 2px solid #c08a90;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.block-menu-notification-entity button{
+
+    color: white;
+    background-color: #c08a90;
+
+}
+
+
+
+.block-menu-missing-entity {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    height: auto;
+    background: none;
+    border: none;
+}
+
+.block-menu-missing-form {
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.block-menu-missing-photo {
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.block-menu-missing-info {
+    margin-left: 30px;
+    cursor: pointer;
+    width: 60%;
+}
+
+.missing-information-entity {
+
+    width: auto;
+    height: auto;
+    margin-top: 8px;
+    font-size: 110%;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: Gilroy;
+
+}
+
+
+
+
+.form-add-block {
+
+    width: 100%;
+    height: auto;
+
+}
+
+
+.form-add-block button {
+
+    width: 80%;
+    height: auto;
+    margin: auto;
+    background: none;
+    border: 2px solid transparent;
+    text-decoration: none;
+    padding: 8px 0px 8px 0px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-left: 8%;
+
+
+}
+
+.form-add-block button:hover {
+
+    border: 2px solid #c08a90;
+
+}
+
+.add-photo {
+
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+

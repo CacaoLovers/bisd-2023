@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+    url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+    url('../fonts/Gilroy-Semibold.woff') format('woff'),
+    url('../fonts/Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+header {
+
+    width: 100%;
+    height: 10%;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+.logo {
+
+    width: 6%;
+    height: 100%;
+    font-size: 200%;
+    margin-left: 100px;
+    color: #624545;
+
+}
+
+.logo img {
+
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+
+}
+
+.logo a {
+
+    text-decoration: none;
+    color: #624545;
+
+}
+
+.header-menu {
+
+    margin-left: 3%;
+    width: auto;
+    height: 50%;
+    font-size: 150%;
+
+}
+
+.form-header-menu {
+
+    display: inline-block;
+    width: auto;
+    height: auto;
+
+}
+
+.header-menu-entity {
+
+    text-decoration: none;
+    margin-left: 1.5%;
+    color: #624545;
+    padding: 8px 30px 8px 30px;
+    border: 2px solid transparent;
+
+}
+
+.header-menu-entity:hover {
+
+    border: 2px solid #c08a90;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
+
+
+.login-button-form{
+
+    display: inline-block;
+    float: right;
+    width: auto;
+    height: 50%;
+    margin-right: 3%;
+
+}
+
+.login-button {
+
+    width: auto;
+    height: auto;
+    font-size: 150%;
+    border-radius: 15px;
+    background: none;
+    font-family: 'Gilroy';
+    padding: 8px 30px 8px 30px;
+    color: #624545;
+    border: 2px solid #c08a90;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.login-button:hover {
+
+    background-color: #c08a90;
+    color: white;
+
+}
+
+.error-block{
+    position: absolute;
+    margin-left: -300px;
+    left: 50%;
+    top: -100px;
+    width: 600px;
+    height: auto;
+    padding: 20px 0px 20px 0px;
+    background: white;
+    font-size: 130%;
+    border-radius: 10px;
+    border: 2px solid #c08a90;
+}
+
+.error-block p {
+    margin-left: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

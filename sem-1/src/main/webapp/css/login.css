@@ -1,0 +1,272 @@
+body {
+
+    padding: 0px;
+    background: white;
+    font-family: Calibri;
+
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+    url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+    url('../fonts/Gilroy-Semibold.woff') format('woff'),
+    url('../fonts/Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+.error-block{
+    position: absolute;
+    margin-left: -300px;
+    left: 50%;
+    top: -100px;
+    width: 600px;
+    height: auto;
+    padding: 20px 0px 20px 0px;
+    background: white;
+    font-size: 130%;
+    border-radius: 10px;
+    border: 2px solid #c08a90;
+}
+
+.error-block p {
+    margin-left: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.fix-block {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #c08a90;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+
+}
+
+main {
+
+    background-color: #c08a90;
+    width: 20%;
+    min-width: 350px;
+    height: 60%;
+    min-height: 540px;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 5%;
+    overflow: hidden;
+
+
+}
+
+.login-form {
+
+    margin-top: 30px;
+    width: 70%;
+    height: 80%;
+    margin: auto;
+
+}
+
+.login-form input{
+
+    margin: auto;
+    border: 2px solid #e3e3e3;
+    border-radius: 15px;
+    background: none;
+    font-size: 1.5em;
+    padding: 8px 8px 8px 8px;
+    font-family: Calibri;
+    width: 100%;
+    color: white;
+    overflow: hidden;
+}
+
+.login-form input::placeholder {
+
+    color: #e0d0d0;
+
+}
+
+.login-form p {
+
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+
+}
+
+.login-form button {
+
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    font-family: Calibri;
+    border-radius: 15px;
+    font-size: 1.5em;
+    background: none;
+    padding: 8px 8px 8px 8px;
+    border: 3px solid white;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+
+    background: white;
+    color: #c08a90;
+
+}
+
+
+.flex { /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.signup-text{
+
+    margin: auto;
+    position: relative;
+    top: 50px;
+    width: max-content;
+    z-index: 1;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #685558;
+
+}
+
+.waves {
+    position:relative;
+    margin-top: 7px;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 0px; /*Fix for safari gap*/
+    min-height:50px;
+    max-height:100px;
+}
+
+.content {
+    position:relative;
+    top: 20px;
+    height:20vh;
+    text-align:center;
+    background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px,0,0);
+    }
+    100% {
+        transform: translate3d(85px,0,0);
+    }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        height:40px;
+        min-height:40px;
+    }
+    .content {
+        height:30vh;
+    }
+    h1 {
+        font-size:24px;
+    }
+}
+
+
+.signup-block-form {
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding-top: 10px;
+
+}
+
+.signup-form {
+
+    margin-top: 30px;
+    width: 70%;
+    height: 80%;
+    margin: auto;
+
+}
+
+.signup-form input{
+
+    margin: auto;
+    border: 2px solid #c08a90;
+    border-radius: 15px;
+    background: none;
+    font-size: 1.5em;
+    padding: 8px 8px 8px 8px;
+    font-family: Calibri;
+    width: 100%;
+    color: #975f68;
+    overflow: hidden;
+}
+
+.signup-form p {
+
+    color: #8f5f65;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+
+}
+
+.signup-form button {
+
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    font-family: Calibri;
+    border-radius: 15px;
+    font-size: 1.5em;
+    background: none;
+    padding: 8px 8px 8px 8px;
+    border: 2px solid #c08a90;
+    color: #975f68;
+    width: 100%;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+
+    background-color: #c08a90;
+    color: white;
+
+}

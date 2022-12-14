@@ -1,0 +1,114 @@
+main{
+    margin: auto;
+    width: 50%;
+    height: auto;
+}
+
+@font-face {
+
+    font-family: 'Gilroy';
+    src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+    url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+    url('../fonts/Gilroy-Semibold.woff') format('woff'),
+    url('../fonts/Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.missing-container{
+    margin: auto;
+    display: flex;
+    width: 80%;
+    height: auto;
+    flex-direction: column;
+}
+
+.block-menu-missing-entity {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    height: auto;
+    background: none;
+    border: none;
+}
+
+.block-menu-missing-form {
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.block-menu-missing-photo {
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.block-menu-missing-info {
+    margin-left: 30px;
+    cursor: pointer;
+    width: 60%;
+}
+
+.missing-information-entity {
+
+    width: auto;
+    height: auto;
+    margin-top: 8px;
+    font-size: 110%;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: Gilroy;
+
+}
+
+.user-table {
+    width: 100%;
+    margin-top: 100px;
+    font-family: Gilroy;
+    border-spacing: 0px;
+}
+
+.user-table td {
+    padding: 8px;
+    border: 1px solid #8f5f65;
+}
+
+.user-table-column {
+    background: #8f5f65;
+    color: white;
+}
+
+.admin-menu-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.admin-menu-button {
+    width: 30%;
+    height: auto;
+    font-size: 150%;
+    border-radius: 15px;
+    background: none;
+    font-family: 'Gilroy';
+    padding: 8px 30px 8px 30px;
+    color: #624545;
+    border: 2px solid #c08a90;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.admin-menu-button:hover {
+    background-color: #c08a90;
+    color: white;
+}
