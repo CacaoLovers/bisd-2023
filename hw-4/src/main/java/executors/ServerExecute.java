@@ -8,10 +8,10 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class ServerExecute {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args){
 
         ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(2);
-        ServerHolder serverHolder = ServerHolder.create(5678, executor);
+        ServerHolder serverHolder = ServerHolder.create(5678);
         while (true){
             executor.execute(serverHolder);
             if (executor.getActiveCount() >= 2) {

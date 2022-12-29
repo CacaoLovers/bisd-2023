@@ -1,8 +1,5 @@
 package holders;
 
-
-
-import models.Game;
 import models.Player;
 import models.Field;
 
@@ -10,15 +7,9 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.*;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.locks.Lock;
-
 public class ServerHolder implements Runnable{
 
     private static final int MAX_PLAYERS = 2;
-
-    private int port;
 
     private InputStream in;
     private OutputStream out;
@@ -27,7 +18,13 @@ public class ServerHolder implements Runnable{
     private ArrayList<Socket> sockets = new ArrayList<>();
     private ArrayList<Player> players = new ArrayList<>();
     private ArrayDeque<Player> moves = new ArrayDeque<>();
-    private Field field;
+    private Field field = Field.builder()
+            .fieldArea(new byte[][]{
+                    {0, 0, 0},
+                    {0, 0, 0},
+                    {0, 0, 0}
+            })
+            .build();;
     private char[] symbols = new char[] {'X', 'O'};
 
 
@@ -35,10 +32,9 @@ public class ServerHolder implements Runnable{
 
     public ServerHolder(){}
 
-    public static ServerHolder create(Integer port, ThreadPoolExecutor serverPool){
+    public static ServerHolder create(Integer port){
         try {
             ServerHolder server = new ServerHolder();
-            server.port = port;
             server.serverSocket = new ServerSocket(port);
             System.out.println("Сервер запущен");
             System.out.println("Ожидание игроков");
@@ -51,15 +47,9 @@ public class ServerHolder implements Runnable{
 
     public void run(){
         try {
-            Socket clientSocket = null;
+            Socket clientSocket;
             Player player;
-            field = Field.builder()
-                    .fieldArea(new byte[][]{
-                            {0, 0, 0},
-                            {0, 0, 0},
-                            {0, 0, 0}
-                    })
-                    .build();
+
             while(sockets.size() != MAX_PLAYERS){
                 clientSocket = serverSocket.accept();
 
@@ -89,6 +79,7 @@ public class ServerHolder implements Runnable{
 
             Player playerMove = moves.removeFirst();
             OutputStream outputStream;
+
             while (!serverSocket.isClosed()){
 
                 outputStream = playerMove.getSocket().getOutputStream();
@@ -106,7 +97,7 @@ public class ServerHolder implements Runnable{
                 System.out.println("Игрок " + playerMove.getPlayerId() + " сходил");
                 Field.showField(field.fieldToByte());
 
-                if (Game.checkWin(field.getFieldArea(), (byte) playerMove.getSymbol())){
+                if (Field.checkWin(field.getFieldArea(), (byte) playerMove.getSymbol())){
                     outputStream.write(new byte[] {(byte) 'W', 0, 0, 0, 0, 0, 0, 0, 0});
                     outputStream.flush();
 
